@@ -28,7 +28,6 @@ module.exports = {
     ]
   },
   devtool:'source-map',
-  devtool:'cheap-module',
   plugins:[
     new HtmlWebpackPlugin({
       template:'index.html'
