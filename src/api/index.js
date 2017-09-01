@@ -3,8 +3,8 @@
  */
 import 'whatwg-fetch';
 import 'es6-promise';
-function get(url) {
-  return fetch(url,{
+function get(url,limit ,offset) {
+  return fetch(`${url}?limit=${limit}&offset=${offset}`,{
     method:'GET',
     credentials:'include',
     accept:'application/json'

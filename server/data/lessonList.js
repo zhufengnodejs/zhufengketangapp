@@ -1,20 +1,20 @@
 ﻿module.exports = {
     hasMore:true,
-    lessons:[
+    list:[
         {
-            url:'http://www.fullstackjavascript.cn/images/vue.png',
+            url:'../../images/vue.png',
             lesson:'Vue.js从理论精讲到项目实战课程',
             lessonId:111,
             price:'￥1000.00元'
         },
         {
-            url:'http://www.fullstackjavascript.cn/images/xiaochengxu.png',
+            url:'../../images/xiaochengxu.png',
             lesson:'Vue.js从理论精讲到项目实战课程',
             lessonId:222,
             price:'￥2000.00元'
         },
         {
-            url:'http://www.fullstackjavascript.cn/images/javascript.png',
+            url:'../../images/javascript.png',
             lesson:'Vue.js从理论精讲到项目实战课程',
             lessonId:333,
             price:'￥3000.00元'
