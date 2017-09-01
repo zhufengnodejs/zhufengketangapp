@@ -32,5 +32,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'index.html'
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true,
+    proxy:{
+      "/api": "http://127.0.0.1:3000"
+    }
+  }
 }

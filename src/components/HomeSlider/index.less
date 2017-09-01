@@ -1,0 +1,26 @@
+.sliders {
+  position: relative;
+  .carousel {
+    img {
+      width: 100%;
+    }
+  }
+  .dots {
+    width:100%;
+    position: absolute;
+    bottom:10px;
+    text-align: center;
+    span{
+      display:inline-block;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background-color: #DDD;
+      cursor: pointer;
+      margin-left:10px;
+      &.active{
+        background-color:#000;
+      }
+    }
+  }
+}

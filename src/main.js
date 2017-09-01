@@ -12,8 +12,8 @@ import App from "./containers/App";
 import store from './store';
 import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'react-router-redux';
-import createHashHistory from 'history/createHashHistory';
-let history = createHashHistory();
+import createHistory from 'history/createBrowserHistory';
+let history = createHistory();
 
 render(
   <Provider store={store}>
