@@ -3,18 +3,24 @@
  */
 import 'whatwg-fetch';
 import 'es6-promise';
-function get(url,limit ,offset) {
-  return fetch(`${url}?limit=${limit}&offset=${offset}`,{
+function get(url) {
+  return fetch(url,{
     method:'GET',
     credentials:'include',
-    accept:'application/json'
+    headers:{
+      accept:'application/json',
+      'Content-Type':'application/json'
+    },
   }).then(res => res.json());
 }
 function post(url, data) {
-  return fetch(url,{
+  return fetch(`${url}`,{
     method:'POST',
     credentials:'include',
-    accept:'application/json',
+    headers:{
+      accept:'application/json',
+      'Content-Type':'application/json'
+    },
     body:JSON.stringify(data)
   }).then(res => res.json());
 }

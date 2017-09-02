@@ -14,6 +14,8 @@ import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import Detail from "./containers/Detail/index";
+import Login from "./containers/Login/index";
+import Reg from "./containers/Reg/index";
 let history = createHistory();
 
 render(
@@ -25,6 +27,8 @@ render(
           <Route path="/lesson" component={Lesson}/>
           <Route path="/profile" component={Profile}/>
           <Route path="/detail" component={Detail}/>
+          <Route path="/reg" component={Reg}/>
+          <Route path="/login" component={Login}/>
         </Switch>
       </App>
     </ConnectedRouter>
