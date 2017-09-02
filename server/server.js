@@ -10,11 +10,12 @@ app.get('/api/slider',function(req,res){
 let lessons = require('./data/lessonList');
 app.get('/api/lesson/:type',function(req,res){
   let {limit,offset} = req.query;
+  let type = req.params.type;
   offset = isNaN(offset)?0:parseInt(offset)
   let data = JSON.parse(JSON.stringify(lessons));
   for(let i=1;i<=data.list.length;i++){
     let lesson = data.list[i-1];
-    lesson.lesson = `${offset+i}-${lesson.lesson}`;
+    lesson.lesson = `${type}-${offset+i}-${lesson.lesson}`;
   }
   if(offset==10){
     data.hasMore = false;

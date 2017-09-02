@@ -16,7 +16,15 @@ let initState = {
 export default function (state = initState, action) {
   switch (action.type) {
     case types.CHANGE_LESSON:
-      return {...state, currentLesson: action.currentLesson};
+      return {...state, currentLesson: action.currentLesson,
+        lessons:{
+          ...state.lessons,
+          loading:false,
+          hasMore:true,
+          list:[],
+          offset:0
+        }
+      };
     case types.GET_SLIDERS:
       return {
         ...state, sliders: {

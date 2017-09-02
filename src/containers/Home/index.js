@@ -28,7 +28,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <HomeHeader currentLesson={this.props.currentLesson} changeLesson={this.props.changeLesson}/>
+        <HomeHeader currentLesson={this.props.currentLesson} changeLesson={this.props.changeLesson} getLessons={this.props.getLessons}/>
         <div ref="content" className="content">
             <HomeSlider sliders={this.props.sliders}/>
             <LessonList lessons={this.props.lessons} getLessons={this.props.getLessons}/>

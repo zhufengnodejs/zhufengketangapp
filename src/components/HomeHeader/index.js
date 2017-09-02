@@ -14,6 +14,7 @@ export default class HomeHeader extends Component {
   handleClick = (event)=>{
     let id = event.target.dataset.id;
     this.props.changeLesson(id);
+    this.props.getLessons();
     this.setState({showMenu: !this.state.showMenu});
   }
 

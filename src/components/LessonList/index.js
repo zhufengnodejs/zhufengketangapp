@@ -19,8 +19,6 @@ export default class LessonList extends Component {
           <i className="iconfont icon-book"></i>
           <span>全部课程</span>
         </h4>
-        {hasMore ? <button className="load-more" onClick={this.loadMore}>点击加载</button> :
-          <div className="load-more">别扯了，已经到底了</div>}
         {
           list.map((item, index) => (
             <div key={index} className="lesson">
