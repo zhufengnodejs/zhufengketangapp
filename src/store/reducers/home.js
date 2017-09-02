@@ -7,10 +7,10 @@ let initState = {
   },
   lessons: {
     loading: false,
-    hasMore: false,
+    hasMore: true,
     list: [],
-    limit:5,
-    offset:0
+    limit: 5,
+    offset: 0
   }
 }
 export default function (state = initState, action) {
@@ -45,7 +45,7 @@ export default function (state = initState, action) {
           ...state.lessons,
           loading: false,
           hasMore: action.payload.hasMore,
-          offset:state.lessons.offset+action.payload.list.length,
+          offset: state.lessons.offset + action.payload.list.length,
           list: [...state.lessons.list, ...action.payload.list]
         }
       }

@@ -19,5 +19,6 @@ app.get('/api/lesson/:type',function(req,res){
   if(offset==10){
     data.hasMore = false;
   }
-  res.json(data);
+    res.json(data);
+
 });

@@ -20,16 +20,18 @@ export default {
   },
   getLessons(){
     return (dispatch,getState)=>{
-      dispatch({
-        type:types.GET_LESSONS
-      });
       let {currentLesson,lessons:{
-         limit,offset
+        loading,limit,offset,hasMore
       }} = getState().home;
-      dispatch({
-        type:types.GET_LESSONS_SUCCESS,
-        payload:getLessons(currentLesson,limit,offset)
-      });
+      if(!loading&&hasMore){
+        dispatch({
+          type:types.GET_LESSONS
+        });
+        dispatch({
+          type:types.GET_LESSONS_SUCCESS,
+          payload:getLessons(currentLesson,limit,offset)
+        });
+      }
     }
   }
 }
