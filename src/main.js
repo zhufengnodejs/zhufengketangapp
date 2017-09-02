@@ -13,6 +13,7 @@ import store from './store';
 import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
+import Detail from "./containers/Detail/index";
 let history = createHistory();
 
 render(
@@ -23,6 +24,7 @@ render(
           <Route exact path="/" component={Home}/>
           <Route path="/lesson" component={Lesson}/>
           <Route path="/profile" component={Profile}/>
+          <Route path="/detail" component={Detail}/>
         </Switch>
       </App>
     </ConnectedRouter>

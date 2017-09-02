@@ -2,7 +2,8 @@
  * 珠峰培训 http://www.zhufengpeixun.cn
  */
 import React, {Component} from 'react';
-import './index.less'
+import './index.less';
+import {Link} from 'react-router-dom';
 let vue = require('../../images/vue.png');
 export default class LessonList extends Component {
   loadMore = ()=>{
@@ -21,11 +22,13 @@ export default class LessonList extends Component {
         </h4>
         {
           list.map((item, index) => (
-            <div key={index} className="lesson">
-              <img src={vue}/>
-              <p className="title">{item.lesson}</p>
-              <p className="price">{item.price}</p>
-            </div>
+            <Link key={index} to={{pathname:'/detail',state:item}}>
+              <div  className="lesson">
+                <img src={vue}/>
+                <p className="title">{item.lesson}</p>
+                <p className="price">{item.price}</p>
+              </div>
+            </Link>
           ))
         }
         {hasMore ? <button className="load-more" onClick={this.loadMore}>点击加载</button> :
