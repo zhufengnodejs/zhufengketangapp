@@ -12,3 +12,5 @@ export const GET_LESSONS_SUCCESS = 'get_lessons_success';
 export const REG = 'reg';
 export const LOGIN = 'login';
 export const LOGOUT = 'logout';
+
+export const VALIDATE = 'validate';

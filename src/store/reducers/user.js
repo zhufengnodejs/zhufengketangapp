@@ -3,44 +3,60 @@
  */
 import * as types from '../action-types';
 let initState = {
-  user:{},
-  error:''
+  user: {},
+  error: ''
 }
-export default function(state=initState,action){
-  switch(action.type){
+export default function (state = initState, action) {
+  console.log(action);
+  switch (action.type) {
     case types.REG:
-      if(action.payload.code ==0){
+      if (action.payload.code == 0) {
         return {
           ...state,
-          user:action.payload.data,
-          error:''
+          user: action.payload.data,
+          error: ''
         }
-      }else{
+      } else {
         return {
           ...state,
-          error:action.payload.error,
-          user:{}
+          error: action.payload.error,
+          user: {}
         }
       }
     case types.LOGIN:
-      if(action.payload.code ==0){
+      if (action.payload.code == 0) {
         return {
           ...state,
-          user:action.payload.data,
-          error:''
+          user: action.payload.data,
+          error: ''
         }
-      }else{
+      } else {
         return {
           ...state,
-          error:action.payload.error,
-          user:{}
+          error: action.payload.error,
+          user: {}
+        }
+      }
+    case types.VALIDATE:
+      console.log('reducers/user.js',action);
+      if (action.payload.code == 0) {
+        return {
+          ...state,
+          user: action.payload.data,
+          error: ''
+        }
+      } else {
+        return {
+          ...state,
+          error: action.payload.error,
+          user: {}
         }
       }
     case types.LOGOUT:
       return {
         ...state,
-        user:{},
-        error:''
+        user: {},
+        error: ''
       }
     default:
       return state;

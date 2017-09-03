@@ -76,3 +76,11 @@ app.get('/api/logout', function (req, res) {
   res.json({code: 0});
 });
 
+app.get('/api/validate',function(req,res){
+  console.log(req.session);
+  if(req.session.user){
+    res.json({code:0,data:req.session.user});
+  }else{
+    res.json({code:1,error:'未登录'});
+  }
+});

@@ -24,7 +24,7 @@ export default class Login extends Component {
 
   componentDidUpdate() {
     if (this.props.user.mobile)
-      this.props.history.push('/profile');
+      this.props.history.push('/lesson');
   }
 
   render() {

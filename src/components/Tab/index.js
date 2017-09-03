@@ -4,7 +4,11 @@
 import React,{Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import './index.less'
+import user from '../../store/actions/user';
 export default class Tab extends Component{
+  componentDidMount(){
+    user.validate();
+  }
     render(){
         return (
             <nav className="footer">

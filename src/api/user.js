@@ -10,6 +10,10 @@ export const login = (user)=>{
   return post('/api/login',user);
 }
 
-export const logout = (user)=>{
+export const logout = ()=>{
   return get('/api/logout');
+}
+
+export const validate = ()=>{
+  return get('/api/validate');
 }
